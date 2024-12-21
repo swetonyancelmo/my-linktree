@@ -110,9 +110,13 @@ footer {
   }
 
   main {
-    width: 300px;
+    width: 350px;
     height: 800px;
     padding: 5px;
+  }
+
+  .my-image {
+    margin-top: 15px;
   }
 
   .links-content a {
@@ -126,7 +130,11 @@ footer {
   footer {
     width: 300px;
     text-align: center;
+    margin: 15px 0px 1px 0px;
   }
 
+  .links-content {
+    height: calc(500px - 200px);
+  }
 
 }
