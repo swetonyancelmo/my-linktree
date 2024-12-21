@@ -103,7 +103,7 @@ footer {
 /* CELULARES */
 
 @media (max-width: 600px) {
-  body {
+  html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -111,7 +111,7 @@ footer {
 
   main {
     width: 330px;
-    height: 780px;
+    height: 800px;
     padding: 5px;
   }
 
