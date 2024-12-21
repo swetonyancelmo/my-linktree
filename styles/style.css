@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  height: 100vh; /* Diz que vai usar o corpo todo do site */
+  margin: 0; 
+  display: flex; /* aqui diz que todo o elemente que tiver dentro do body será flexivel e podera ser mudado para qualquer lugar */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url('/images/image2.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ccd0cf;
+}
+
+main {
+  width: 600px;
+  height: 800px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 15px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+}
+
+/* INICIO */
+
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.my-image {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.text-ola {
+  padding-top: 10px;
+}
+
+.text-image {
+  line-height: 1.2;
+}
+
+/* AREA DE LINKS */
+
+.links-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(700px - 318px);
+}
+
+.links-itens {
+  margin-top: 20px;
+  font-size: 24px;
+
+  color: #939FA3;
+}
+
+.links-itens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:  0.5s ease;
+}
+
+.links-content a {
+  width: 400px;
+  height: 60px;
+  background-color: #101F2B;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.links-itens:hover {
+  transform: scale(1.05);
+  background-color: #122330;
+}
+
+.links-itens:hover {
+  color: #c6ccca;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 500px;
+  }
+
+  .links-content a {
+    width: 200px;
+  }
+
+  .text-image {
+    width: 300px;
+  }
+
+
+}
