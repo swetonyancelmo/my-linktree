@@ -105,22 +105,23 @@ footer {
 @media (max-width: 600px) {
   html, body {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     overflow-x: hidden;
   }
 
   main {
-    width: 350px;
+    width: 330px;
     height: 800px;
     padding: 5px;
   }
 
   .my-image {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .links-content a {
     width: 200px;
+    padding-bottom: 3px;
   }
 
   .text-image {
@@ -130,7 +131,7 @@ footer {
   footer {
     width: 300px;
     text-align: center;
-    margin: 15px 0px 1px 0px;
+    margin: 15px 0px 5px 0px;
   }
 
   .links-content {
