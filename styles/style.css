@@ -110,7 +110,9 @@ footer {
   }
 
   main {
-    width: 400px;
+    width: 300px;
+    height: 800px;
+    padding: 5px;
   }
 
   .links-content a {
