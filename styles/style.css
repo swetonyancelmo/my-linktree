@@ -110,7 +110,7 @@ footer {
   }
 
   main {
-    width: 500px;
+    width: 400px;
   }
 
   .links-content a {
@@ -119,6 +119,11 @@ footer {
 
   .text-image {
     width: 300px;
+  }
+
+  footer {
+    width: 300px;
+    text-align: center;
   }
 
 
