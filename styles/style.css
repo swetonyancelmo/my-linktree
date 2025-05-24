@@ -1,35 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  height: 100vh; /* Diz que vai usar o corpo todo do site */
-  margin: 0; 
-  display: flex; /* aqui diz que todo o elemente que tiver dentro do body será flexivel e podera ser mudado para qualquer lugar */
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: url('/images/image2.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url('/images/image2.jpg') no-repeat center center/cover;
   color: #ccd0cf;
 }
 
 main {
-  width: 600px;
-  height: 800px;
+  width: 90vw;
+  max-width: 600px;
+  min-width: 280px;
+  min-height: 70vh;
   border: 2px solid rgba(255, 255, 255, .2);
   border-radius: 15px;
-  background: transparent;
+  background: rgba(16, 31, 43, 0.7);
   backdrop-filter: blur(20px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* INICIO */
 
 .image-content {
   display: flex;
@@ -42,16 +45,23 @@ main {
 }
 
 .my-image {
-  width: 180px;
+  width: 140px;
+  max-width: 50vw;
   border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
 .text-ola {
   padding-top: 10px;
+  font-size: 1.1rem;
 }
 
 .text-image {
-  line-height: 1.2;
+  line-height: 1.4;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 350px;
 }
 
 /* AREA DE LINKS */
@@ -61,47 +71,69 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(700px - 318px);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .links-itens {
-  margin-top: 20px;
-  font-size: 24px;
-
+  font-size: 1.2rem;
   color: #939FA3;
-}
-
-.links-itens {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transition:  0.5s ease;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .links-content a {
-  width: 400px;
-  height: 60px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 160px;
+  height: 56px;
   background-color: #101F2B;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
-.links-itens:hover {
-  transform: scale(1.05);
+.links-itens:hover,
+.links-content a:hover {
+  transform: scale(1.04);
   background-color: #122330;
-}
-
-.links-itens:hover {
   color: #c6ccca;
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  main {
+    max-width: 95vw;
+    padding: 1rem 0.5rem;
+  }
+  .links-content a {
+    max-width: 300px;
+  }
+  .text-image, footer {
+    max-width: 300px;
+  }
 }
 
 /* CELULARES */
-
 @media (max-width: 600px) {
   html, body {
     margin: 0;
@@ -110,32 +142,33 @@ footer {
   }
 
   main {
-    width: 330px;
-    height: 800px;
-    padding: 5px;
+    width: 98vw;
+    min-width: 0;
+    max-width: 99vw;
+    padding: 0.5rem 0.2rem;
   }
 
   .my-image {
+    width: 100px;
+    max-width: 60vw;
     padding-top: 10px;
   }
 
   .links-content a {
-    width: 200px;
-    margin-bottom: 5px;
+    max-width: 95vw;
+    min-width: 120px;
+    height: 48px;
+    font-size: 1rem;
   }
 
-  .text-image {
-    width: 300px;
-  }
-
-  footer {
-    width: 300px;
-    text-align: center;
-    margin: 15px 0px 5px 0px;
+  .text-image, footer {
+    max-width: 95vw;
+    font-size: 0.95rem;
   }
 
   .links-content {
-    height: calc(500px - 200px);
+    gap: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
-
 }
